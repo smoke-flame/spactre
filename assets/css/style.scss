@@ -28,6 +28,10 @@ p {
 
 }
 
+.box {
+    padding: 0 10rem;
+}
+
 .wrapper {
     padding-top: 4.1rem;
     background-image: url(../img/header/intro-bg.jpg);
@@ -181,7 +185,7 @@ p {
     &__block {
         max-width: 100%;
 
-        background-color: #F6F7FB;
+        background-color: $darkWhite;
         padding: 1.5rem 0 1rem 0;
         text-align: center;
 
@@ -228,7 +232,7 @@ p {
 }
 
 .card {
-    background-color: #F6F7FB;
+    background-color: $darkWhite;
 }
 
 
@@ -308,9 +312,7 @@ p {
     padding: 14rem 0;
     background-color: $white;
 
-    &__inner {
-        padding: 0 10rem;
-    }
+
 
     &__title {
         font-size: 3rem;
@@ -341,6 +343,262 @@ p {
 
                 &:last-child {
                     margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+
+}
+
+.become {
+
+    padding: 10.4rem 0 7.6rem 0;
+    background: url(../img/become/bg-image.png) no-repeat;
+    background-position: right top +100px;
+
+    background-color: $darkWhite;
+
+    &__inner {
+        max-width: 435px;
+    }
+
+    &__img {
+        margin-top: -20rem;
+        overflow: hidden;
+        margin-bottom: 8.5rem;
+
+        & img {
+            max-width: 100%;
+            height: auto;
+            transition: transform .5s linear;
+
+        }
+
+        &:hover img {
+            transform: scale(1.5);
+            transition: 2s;
+            cursor: pointer;
+
+        }
+    }
+
+    &__subtitle {
+        text-transform: uppercase;
+        color: $orange;
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+        margin-bottom: 1.1rem;
+        max-width: 18rem;
+    }
+
+    &__title {
+        color: $darkBlue;
+        font-size: 3rem;
+        line-height: 3.5rem;
+        max-width: 40rem;
+        margin-bottom: 3.7rem;
+    }
+
+    &__text {
+        color: #676F92;
+        font-family: $secondaryFont;
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+        margin-bottom: 4rem;
+    }
+
+    &__subtext {
+        color: $darkBlue;
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+
+        &__span {
+            margin-right: 3.3rem;
+        }
+    }
+}
+
+.buy-book {
+    background-color: $white;
+    padding: 15.5rem 0;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__culc {
+        max-width: 455px;
+        margin-right: 4rem;
+
+        &__subtitle {
+            text-transform: uppercase;
+            color: $orange;
+            font-size: 1.3rem;
+            line-height: 1.7rem;
+            margin-bottom: 1.1rem;
+            max-width: 18rem;
+        }
+
+        &__title {
+            color: $darkBlue;
+            font-size: 3rem;
+            line-height: 3.5rem;
+            max-width: 40rem;
+            margin-bottom: 3.7rem;
+        }
+
+        &__text {
+            color: #676F92;
+            font-family: $secondaryFont;
+            font-size: 1.4rem;
+            line-height: 2.6rem;
+            padding-right: 10rem;
+            margin-bottom: 6rem;
+        }
+
+        &__price {
+            max-width: 345px;
+
+            &__label {
+                font-size: 1.4rem;
+                color: $orange;
+                line-height: 2.4rem;
+                margin-bottom: 1.8rem;
+                max-width: 10rem;
+            }
+
+            &__buttons {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 5rem;
+
+                & button {
+                    line-height: 2.4rem;
+                    font-size: 1.5rem;
+                    font-family: $mainFont;
+                    padding: 1.2rem 2.4em;
+                    outline: none;
+
+                    border-radius: 2.25em;
+
+                    cursor: pointer;
+                    font-weight: 700;
+
+
+                }
+
+
+
+                &__left {
+                    color: $orange;
+                    border: 1px solid $orange;
+                    background-color: $white;
+
+
+                    &:focus {
+                        background-color: #fad9c8;
+                    }
+                }
+
+                &__right {
+                    color: #666E91;
+                    border: 1px solid #666E91;
+                    background-color: $white;
+
+                    &:focus {
+                        background-color: #aebdfc;
+                    }
+
+                }
+            }
+
+            &__numbers {
+                display: flex;
+                justify-content: space-between;
+
+                &__item {
+                    width: 40%;
+
+                    &__label {
+                        font-size: 1.4rem;
+                        color: $orange;
+                        line-height: 2.4rem;
+                        margin-bottom: 1.8rem;
+                    }
+
+                    &__buttons {
+                        display: flex;
+                        align-items: center;
+
+                        &__button {
+                            cursor: pointer;
+                        }
+
+                        &__number {
+                            margin: 0 2.5rem;
+                            font-size: 1.4rem;
+                            color: #111111;
+                            line-height: 2.4rem;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    &__form {
+        background-color: $darkBlue;
+        padding: 5rem 8rem;
+        max-width: 500px;
+        border: 1px solid #707070;
+
+        &__title {
+            color: $white;
+            font-size: 3rem;
+            line-height: 6.5rem;
+            font-weight: 400;
+            margin-bottom: 1.2rem;
+        }
+
+        &__price {
+            margin-left: 4rem;
+        }
+
+        &__result {
+            max-width: 19rem;
+            color: $white;
+            font-size: 1.2rem;
+            line-height: 2.4rem;
+            word-spacing: 1px;
+            margin-bottom: 4.7rem;
+
+            &__hours {
+                color: $orange;
+            }
+        }
+
+        &__area {
+
+            &__text {
+                text-transform: uppercase;
+                color: $orange;
+                font-size: 1rem;
+                line-height: 2.4rem;
+                margin-bottom: 0.6rem;
+            }
+
+            &__input {
+                width: 100%;
+                background: inherit;
+                border: none;
+                outline: none;
+                border-bottom: 1px solid rgba($white, 0.4);
+
+                &::placeholder {
+                    color: $white;
                 }
             }
         }
