@@ -14,13 +14,22 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul,
+li,
+input,
+blockquote {
   margin: 0;
   padding: 0;
 }
 
 .container {
-  width: 1170px;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.limiter {
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -599,21 +608,291 @@ p {
   border: none;
   outline: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.9rem 0;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-size: 1.4rem;
 }
 
 .buy-book__form__area__input::-webkit-input-placeholder {
   color: #FFFFFF;
+  font-size: 1.4rem;
 }
 
 .buy-book__form__area__input:-ms-input-placeholder {
   color: #FFFFFF;
+  font-size: 1.4rem;
 }
 
 .buy-book__form__area__input::-ms-input-placeholder {
   color: #FFFFFF;
+  font-size: 1.4rem;
 }
 
 .buy-book__form__area__input::placeholder {
   color: #FFFFFF;
+  font-size: 1.4rem;
+}
+
+.buy-book__form__area__input:focus {
+  background-color: #202852;
+}
+
+.buy-book__form__area__btn {
+  margin-top: 1rem;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  color: #F45E1F;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  border-radius: 2rem;
+  padding: 1rem 0.5rem;
+  margin-left: -0.5rem;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.buy-book__form__area__btn:hover {
+  background-color: #202852;
+  cursor: pointer;
+}
+
+.buy-book__form__area__btn__span {
+  background-color: inherit;
+  color: #F45E1F;
+  font-size: 2rem;
+  margin-left: 3.5rem;
+}
+
+.customer {
+  background-color: #F6F7FB;
+  padding: 15rem 0;
+}
+
+.customer__title {
+  color: #273164;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  max-width: 35rem;
+  margin: 0 auto 6rem auto;
+}
+
+.customer__review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.customer__review__arrow {
+  max-width: 5rem;
+  height: auto;
+  cursor: pointer;
+  z-index: 1000;
+  display: block;
+}
+
+.customer__review__arrow:last-child {
+  margin-left: 2rem;
+}
+
+.customer__review__carusel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  margin-bottom: 15rem;
+}
+
+.customer__review__carusel__transform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.customer__review__item {
+  padding: 6rem 3rem;
+  background-color: #FFFFFF;
+  min-width: 34rem;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+  margin: 0 2rem;
+}
+
+.customer__review__item__text {
+  margin-top: 2.7rem;
+  font-size: 2rem;
+  color: #273164;
+  line-height: 3rem;
+}
+
+.customer__review__item__info {
+  margin-top: 3rem;
+}
+
+.customer__review__item__info__name {
+  color: #F45E1F;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.customer__review__item__info__sity {
+  color: #B4B4B4;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-top: 0.5rem;
+}
+
+.customer__question__title {
+  text-align: center;
+  color: #273164;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  margin-bottom: 4rem;
+}
+
+.customer__question__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.customer__question__buttons__call {
+  border: 1px solid #F45E1F;
+  line-height: 2.4rem;
+  font-size: 1.5rem;
+  font-family: "Lato", sans-serif;
+  padding: 1.2rem 2.8rem;
+  outline: none;
+  border-radius: 2.25rem;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  color: #F45E1F;
+  margin-right: 2.5rem;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.customer__question__buttons__call:hover {
+  background-color: #fad9c8;
+}
+
+.customer__question__buttons__email {
+  border: 1px solid #273164;
+  line-height: 2.4rem;
+  font-size: 1.5rem;
+  font-family: "Lato", sans-serif;
+  padding: 1.2rem 5.1rem;
+  outline: none;
+  border-radius: 2.25rem;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  color: #273164;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.customer__question__buttons__email:hover {
+  background-color: #aebdfc;
+}
+
+.footer {
+  background-color: #FFFFFF;
+  padding: 15rem 0 3rem 0;
+}
+
+.footer__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__main__sparcle {
+  max-width: 14.2rem;
+}
+
+.footer__main__sparcle__title {
+  color: #273164;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+.footer__main__sparcle__text {
+  color: #676F92;
+  font-size: 1.4rem;
+  line-height: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.footer__main__sparcle__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__main__sparcle__icons img {
+  display: block;
+}
+
+.footer__main__house, .footer__main__commercial, .footer__main__contact {
+  margin-top: 1rem;
+}
+
+.footer__main__house__title, .footer__main__commercial__title, .footer__main__contact__title {
+  font-size: 2.2rem;
+  color: #273164;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+.footer__main__house__list, .footer__main__commercial__list, .footer__main__contact__list {
+  list-style: none;
+}
+
+.footer__main__house__list__item, .footer__main__commercial__list__item, .footer__main__contact__list__item {
+  color: #676F92;
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+}
+
+.footer__main__house__list__item:last-child, .footer__main__commercial__list__item:last-child, .footer__main__contact__list__item:last-child {
+  margin-bottom: 0rem;
+}
+
+.footer__main__house__list__item--mail, .footer__main__commercial__list__item--mail, .footer__main__contact__list__item--mail {
+  font-size: 1.9rem;
+  color: #F45E1F;
+}
+
+.footer__copy {
+  margin-top: 11rem;
+  padding-top: 2.9rem;
+  border-top: 1px solid #D1D3DE;
+  font-size: 1.4rem;
+  color: #273164;
+  line-height: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

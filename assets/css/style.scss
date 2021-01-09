@@ -16,16 +16,25 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul,
+li,
+input,
+blockquote {
     margin: 0;
     padding: 0;
 }
 
 .container {
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
 
 
+}
+
+.limiter {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .box {
@@ -401,7 +410,7 @@ p {
     }
 
     &__text {
-        color: #676F92;
+        color: $lightBlue;
         font-family: $secondaryFont;
         font-size: 1.4rem;
         line-height: 2.6rem;
@@ -449,7 +458,7 @@ p {
         }
 
         &__text {
-            color: #676F92;
+            color: $lightBlue;
             font-family: $secondaryFont;
             font-size: 1.4rem;
             line-height: 2.6rem;
@@ -596,13 +605,276 @@ p {
                 border: none;
                 outline: none;
                 border-bottom: 1px solid rgba($white, 0.4);
+                padding: 0.9rem 0;
+                margin-bottom: 2rem;
+                cursor: pointer;
+                color: $white;
+                font-size: 1.4rem;
 
                 &::placeholder {
                     color: $white;
+                    font-size: 1.4rem;
+                }
+
+                &:focus {
+                    background-color: darken($darkBlue, 5%);
+                }
+            }
+
+            &__btn {
+                margin-top: 1rem;
+                border: none;
+                outline: none;
+                background-color: inherit;
+                color: $orange;
+                font-size: 2rem;
+                line-height: 2.7rem;
+                border-radius: 2rem;
+                padding: 1rem 0.5rem;
+                margin-left: -0.5rem;
+                transition: all 0.2s linear;
+
+                &:hover {
+                    background-color: darken($darkBlue, 5%);
+                    cursor: pointer;
+                }
+
+                &__span {
+                    background-color: inherit;
+                    color: $orange;
+                    font-size: 2rem;
+                    margin-left: 3.5rem;
                 }
             }
         }
     }
 
 
+}
+
+
+.customer {
+    background-color: $darkWhite;
+    padding: 15rem 0;
+
+
+    &__title {
+        color: $darkBlue;
+        font-size: 3rem;
+        line-height: 3.5rem;
+        max-width: 35rem;
+        margin: 0 auto 6rem auto;
+    }
+
+    &__review {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__arrow {
+            max-width: 5rem;
+            height: auto;
+            cursor: pointer;
+            z-index: 1000;
+            display: block;
+
+
+
+            &:last-child {
+                margin-left: 2rem;
+            }
+        }
+
+        &__carusel {
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            margin-bottom: 15rem;
+
+            &__transform {
+                display: flex;
+            }
+
+
+        }
+
+        &__item {
+            padding: 6rem 3rem;
+            background-color: $white;
+            min-width: 34rem;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+            margin: 0 2rem;
+
+
+            &__text {
+                margin-top: 2.7rem;
+                font-size: 2rem;
+                color: $darkBlue;
+                line-height: 3rem;
+            }
+
+            &__info {
+                margin-top: 3rem;
+
+                &__name {
+                    color: $orange;
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                }
+
+                &__sity {
+                    color: $grey;
+                    font-size: 1.4rem;
+                    line-height: 2rem;
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+    }
+
+    &__question {
+
+
+        &__title {
+            text-align: center;
+            color: $darkBlue;
+            font-size: 3rem;
+            line-height: 3.5rem;
+            margin-bottom: 4rem;
+        }
+
+        &__buttons {
+
+            display: flex;
+            justify-content: center;
+
+            &__call {
+                border: 1px solid $orange;
+                line-height: 2.4rem;
+                font-size: 1.5rem;
+                font-family: $mainFont;
+                padding: 1.2rem 2.8rem;
+                outline: none;
+                border-radius: 2.25rem;
+                cursor: pointer;
+                font-weight: 700;
+                text-decoration: none;
+                color: $orange;
+                margin-right: 2.5rem;
+                transition: all 0.2s linear;
+
+                &:hover {
+                    background-color: #fad9c8;
+                }
+
+            }
+
+            &__email {
+                border: 1px solid $darkBlue;
+                line-height: 2.4rem;
+                font-size: 1.5rem;
+                font-family: $mainFont;
+                padding: 1.2rem 5.1rem;
+                outline: none;
+                border-radius: 2.25rem;
+                cursor: pointer;
+                font-weight: 700;
+                text-decoration: none;
+                color: $darkBlue;
+                transition: all 0.2s linear;
+
+                &:hover {
+                    background-color: #aebdfc;
+                }
+
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $white;
+    padding: 15rem 0 3rem 0;
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+
+        &__sparcle {
+            max-width: 14.2rem;
+
+            &__title {
+                color: $darkBlue;
+                font-size: 3rem;
+                line-height: 3.5rem;
+                margin-bottom: 3rem;
+                font-weight: 500;
+            }
+
+            &__text {
+                color: $lightBlue;
+                font-size: 1.4rem;
+                line-height: 3.5rem;
+                margin-bottom: 3.5rem;
+            }
+
+            &__icons {
+                display: flex;
+                justify-content: space-between;
+
+                & img {
+                    display: block;
+                }
+            }
+
+        }
+
+        &__house,
+        &__commercial,
+        &__contact {
+            margin-top: 1rem;
+
+            &__title {
+                font-size: 2.2rem;
+                color: $darkBlue;
+                font-weight: 400;
+                margin-bottom: 3rem;
+
+
+            }
+
+            &__list {
+                list-style: none;
+
+                &__item {
+                    color: $lightBlue;
+                    font-size: 1.4rem;
+                    margin-bottom: 2.5rem;
+
+                    &:last-child {
+                        margin-bottom: 0rem;
+                    }
+
+                    &--mail {
+                        font-size: 1.9rem;
+                        color: $orange;
+                    }
+                }
+
+            }
+        }
+
+
+    }
+
+
+    &__copy {
+        margin-top: 11rem;
+        padding-top: 2.9rem;
+        border-top: 1px solid #D1D3DE;
+        font-size: 1.4rem;
+        color: $darkBlue;
+        line-height: 2rem;
+    }
 }
