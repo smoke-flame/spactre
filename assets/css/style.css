@@ -43,6 +43,7 @@ blockquote {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  position: relative;
 }
 
 .header {
@@ -90,6 +91,58 @@ blockquote {
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
 }
 
+.not-active {
+  display: none;
+}
+
+.nav__tel {
+  display: none;
+}
+
+.nav__tel__burger {
+  width: 26px;
+  height: 26px;
+}
+
+.nav__tel__active__close {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 1000;
+  top: 25px;
+  right: 25px;
+}
+
+.nav__tel__menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #000;
+  z-index: 1000;
+}
+
+.nav__tel__menu__link {
+  text-align: center;
+  padding: 10% 0;
+  font-size: 3rem;
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+}
+
+.nav__tel__menu__link:visited {
+  color: #FFFFFF;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,6 +163,10 @@ blockquote {
   font-weight: 500;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
+}
+
+.nav__link:visited {
+  color: #FFFFFF;
 }
 
 .nav__link:first-child {
@@ -508,18 +565,10 @@ blockquote {
   background-color: #FFFFFF;
 }
 
-.buy-book__culc__price__buttons__left:focus {
-  background-color: #fad9c8;
-}
-
 .buy-book__culc__price__buttons__right {
   color: #666E91;
   border: 1px solid #666E91;
   background-color: #FFFFFF;
-}
-
-.buy-book__culc__price__buttons__right:focus {
-  background-color: #aebdfc;
 }
 
 .buy-book__culc__price__numbers {
@@ -894,5 +943,129 @@ blockquote {
   font-size: 1.4rem;
   color: #273164;
   line-height: 2rem;
+}
+
+/*==============================MEDIA==============================*/
+@media (max-width: 1024px) {
+  body,
+  html {
+    font-size: 9px;
+  }
+  .nav__link {
+    display: block;
+    height: 30px;
+    text-align: center;
+  }
+  .container {
+    max-width: 800px;
+  }
+  .limiter {
+    max-width: 700px;
+  }
+  .become {
+    background-size: contain;
+  }
+}
+
+@media (max-width: 800px) {
+  body,
+  html {
+    font-size: 8px;
+  }
+  .container {
+    max-width: 600px;
+  }
+  .nav {
+    display: none;
+  }
+  .nav__tel {
+    display: block;
+  }
+  .btn--nav {
+    margin-left: 0;
+  }
+  .limiter {
+    max-width: 500px;
+  }
+  .buy-book__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .buy-book__culc {
+    margin-right: 0;
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  body,
+  html {
+    font-size: 7px;
+  }
+  .container {
+    max-width: 400px;
+  }
+  .limiter {
+    max-width: 350px;
+  }
+  .cards {
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cards__title {
+    width: 100%;
+    height: 40px;
+  }
+  .cards__item {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .cards__item:last-child {
+    margin: 0 auto;
+    margin-bottom: 0;
+  }
+  .footer__main {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer__main__sparcle, .footer__main__house, .footer__main__commercial, .footer__main__contact {
+    max-width: 40%;
+    width: 40%;
+    text-align: center;
+  }
+  .footer__main__commercial, .footer__main__contact {
+    margin-top: 4rem;
+  }
+  .footer__main__sparcle__icons {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (max-width: 400px) {
+  body,
+  html {
+    font-size: 6px;
+  }
+  .container {
+    max-width: 300px;
+  }
+  .limiter {
+    max-width: 250px;
+  }
+  .footer__main__sparcle, .footer__main__house, .footer__main__commercial, .footer__main__contact {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+  .footer__main__house {
+    margin-top: 4rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

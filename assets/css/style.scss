@@ -48,6 +48,7 @@ blockquote {
     background-repeat: no-repeat;
     background-position: center center;
     // height: 994px;
+    position: relative;
 }
 
 .header {
@@ -89,6 +90,58 @@ blockquote {
     }
 }
 
+.not-active {
+    display: none;
+}
+
+.nav__tel {
+    display: none;
+
+
+    &__burger {
+        width: 26px;
+        height: 26px;
+    }
+
+    &__active__close {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        z-index: 1000;
+        top: 25px;
+        right: 25px;
+    }
+
+
+
+    &__menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #000;
+        z-index: 1000;
+
+
+
+        &__link {
+            text-align: center;
+            padding: 10% 0;
+            font-size: 3rem;
+            text-decoration: none;
+            color: $white;
+            display: block;
+
+            &:visited {
+                color: $white;
+            }
+        }
+    }
+}
+
 .nav {
     display: flex;
 
@@ -108,6 +161,10 @@ blockquote {
         margin-left: 6rem;
         font-weight: 500;
         transition: all 0.2s linear;
+
+        &:visited {
+            color: $white;
+        }
 
 
         &:first-child {
@@ -505,9 +562,7 @@ blockquote {
                     background-color: $white;
 
 
-                    &:focus {
-                        background-color: #fad9c8;
-                    }
+
                 }
 
                 &__right {
@@ -515,9 +570,7 @@ blockquote {
                     border: 1px solid #666E91;
                     background-color: $white;
 
-                    &:focus {
-                        background-color: #aebdfc;
-                    }
+
 
                 }
             }
@@ -876,5 +929,181 @@ blockquote {
         font-size: 1.4rem;
         color: $darkBlue;
         line-height: 2rem;
+    }
+}
+
+
+
+/*==============================MEDIA==============================*/
+
+
+
+@media(max-width:1024px) {
+
+    body,
+    html {
+        font-size: 9px;
+    }
+
+    .nav {
+        &__link {
+            display: block;
+            height: 30px;
+            text-align: center;
+        }
+    }
+
+    .container {
+        max-width: 800px;
+
+    }
+
+    .limiter {
+        max-width: 700px;
+    }
+
+    .become {
+        background-size: contain;
+    }
+}
+
+@media(max-width: 800px) {
+
+    body,
+    html {
+        font-size: 8px;
+    }
+
+    .container {
+        max-width: 600px;
+
+    }
+
+    .nav {
+        display: none;
+
+
+    }
+
+    .nav__tel {
+        display: block;
+    }
+
+    .btn--nav {
+        margin-left: 0;
+    }
+
+
+    .limiter {
+        max-width: 500px;
+    }
+
+    .buy-book {
+        &__inner {
+            flex-direction: column;
+        }
+
+        &__culc {
+            margin-right: 0;
+            max-width: 100%;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+@media(max-width: 600px) {
+
+    body,
+    html {
+        font-size: 7px;
+    }
+
+    .container {
+        max-width: 400px;
+
+    }
+
+    .limiter {
+        max-width: 350px;
+    }
+
+    .cards {
+        text-align: center;
+        flex-direction: column;
+
+
+        &__title {
+            width: 100%;
+            height: 40px;
+        }
+
+        &__item {
+            margin: 0 auto;
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin: 0 auto;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .footer__main {
+        flex-wrap: wrap;
+
+        &__sparcle,
+        &__house,
+        &__commercial,
+        &__contact {
+            max-width: 40%;
+            width: 40%;
+            text-align: center;
+        }
+
+        &__commercial,
+        &__contact {
+            margin-top: 4rem;
+        }
+
+
+
+        &__sparcle {
+            &__icons {
+                justify-content: space-around;
+            }
+        }
+    }
+}
+
+@media(max-width: 400px) {
+
+    body,
+    html {
+        font-size: 6px;
+    }
+
+    .container {
+        max-width: 300px;
+
+    }
+
+    .limiter {
+        max-width: 250px;
+    }
+
+    .footer__main {
+
+        &__sparcle,
+        &__house,
+        &__commercial,
+        &__contact {
+            max-width: 100%;
+            width: 100%;
+            text-align: center;
+        }
+
+        &__house {
+            margin-top: 4rem;
+        }
     }
 }
