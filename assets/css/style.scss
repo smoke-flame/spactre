@@ -229,9 +229,20 @@ blockquote {
 
             color: $white;
             border: 1px solid $white;
-            padding: 2.5rem;
+
             border-radius: 50%;
             cursor: pointer;
+
+
+            &__btn {
+                text-decoration: none;
+                padding: 2.5rem;
+                display: block;
+
+                &:visited {
+                    color: $white;
+                }
+            }
 
 
 
@@ -268,6 +279,7 @@ blockquote {
 .btn--intro {
     padding: 1.2rem 4rem;
     margin-right: 3rem;
+    line-height: 3.1rem;
 }
 
 
@@ -293,6 +305,7 @@ blockquote {
 
     .intro__location {
         padding-right: 1rem;
+        max-height: 2rem;
     }
 
 }
@@ -539,7 +552,20 @@ blockquote {
                 justify-content: space-between;
                 margin-bottom: 5rem;
 
-                & button {
+
+
+                // &__left .active {
+                //     background-color: #ccc;
+                // }
+
+
+
+
+
+                &__left {
+                    color: $orange;
+                    border: 1px solid $orange;
+                    background-color: $white;
                     line-height: 2.4rem;
                     font-size: 1.5rem;
                     font-family: $mainFont;
@@ -551,17 +577,9 @@ blockquote {
                     cursor: pointer;
                     font-weight: 700;
 
-
-                }
-
-
-
-                &__left {
-                    color: $orange;
-                    border: 1px solid $orange;
-                    background-color: $white;
-
-
+                    &.active {
+                        background-color: #ffd5c3;
+                    }
 
                 }
 
@@ -570,7 +588,20 @@ blockquote {
                     border: 1px solid #666E91;
                     background-color: $white;
 
+                    line-height: 2.4rem;
+                    font-size: 1.5rem;
+                    font-family: $mainFont;
+                    padding: 1.2rem 2.4em;
+                    outline: none;
 
+                    border-radius: 2.25em;
+
+                    cursor: pointer;
+                    font-weight: 700;
+
+                    &.active {
+                        background-color: #d3dbff;
+                    }
 
                 }
             }
@@ -747,6 +778,7 @@ blockquote {
 
             &__transform {
                 display: flex;
+                transition: all 0.2s linear;
             }
 
 
@@ -758,6 +790,29 @@ blockquote {
             min-width: 34rem;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
             margin: 0 2rem;
+
+            @media (max-width:1024px) {
+                max-width: 50%;
+                min-width: 214px;
+            }
+
+            @media (max-width:800px) {
+                max-width: 100%;
+                min-width: 340px;
+            }
+
+            @media (max-width:600px) {
+                max-width: 100%;
+                min-width: 210px;
+            }
+
+            @media (max-width:400px) {
+                max-width: 100%;
+                min-width: 180px;
+            }
+
+
+
 
 
             &__text {
@@ -940,6 +995,19 @@ blockquote {
 
 @media(max-width:1024px) {
 
+
+    .customer__review__item:nth-child(3),
+    .customer__review__item:nth-child(4),
+    .customer__review__item:nth-child(5),
+    .customer__review__item:nth-child(6) {
+        display: none;
+    }
+
+    #prev-btn,
+    #next-btn {
+        display: none;
+    }
+
     body,
     html {
         font-size: 9px;
@@ -968,6 +1036,8 @@ blockquote {
 }
 
 @media(max-width: 800px) {
+
+
 
     body,
     html {
@@ -1048,6 +1118,30 @@ blockquote {
         }
     }
 
+    .buy-book__culc {
+        &__subtitle {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        &__title {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        &__text {
+            padding-right: 0;
+            text-align: center;
+        }
+
+        &__price {
+            &__label {
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
     .footer__main {
         flex-wrap: wrap;
 
@@ -1088,7 +1182,7 @@ blockquote {
     }
 
     .limiter {
-        max-width: 250px;
+        max-width: 300px;
     }
 
     .footer__main {

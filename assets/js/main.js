@@ -123,3 +123,58 @@ function checkPrices() {
     }
 }
 checkPrices();
+
+
+
+// carusel
+let position = -15;
+let sliderToShow = 2;
+const sliderToScroll = 1;
+let itemWidth = 440;
+let screen = document.querySelector(".container").clientWidth;
+if (screen > 800) {
+    sliderToShow = 2;
+
+} else if (screen <= 800) {
+    sliderToShow = 1;
+    itemWidth = 200;
+
+}
+
+const container = document.querySelector(".customer__review__carusel");
+const track = document.querySelector(".customer__review__carusel__transform");
+const items = document.querySelectorAll(".customer__review__item");
+const item = document.querySelectorAll(".customer__review__item");
+const btnPrev = document.querySelector("#prev-btn");
+const btnNext = document.querySelector("#next-btn");
+
+
+const itemCount = items.length;
+const movePosition = sliderToScroll * itemWidth;
+
+
+
+
+
+
+items.forEach((item) => {
+    item.style.maxWidth = `${itemWidth}px`;
+});
+
+btnPrev.addEventListener("click", function () {
+    if (position < 0) {
+
+        position = position + movePosition;
+        track.style.transform = `translateX(${position}px)`;
+    }
+})
+
+btnNext.addEventListener("click", function () {
+
+    if (position >= ((itemCount - sliderToShow - 1) * itemWidth) * -1) {
+
+        position = position - movePosition;
+        track.style.transform = `translateX(${position}px)`;
+
+    }
+})
