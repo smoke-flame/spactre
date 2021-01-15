@@ -127,7 +127,7 @@ checkPrices();
 
 
 // carusel
-let position = -15;
+let position = 0;
 let sliderToShow = 2;
 const sliderToScroll = 1;
 let itemWidth = 440;
